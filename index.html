@@ -31,7 +31,9 @@
               <p class="card-text">{{event.description}}</p>
               <p class="card-text">Add your name to the guest list for exclusive offers:</p>
 
-              <form class="form-inline" v-on:submit.prevent="formSubmit">
+              <!-- <form class="form-inline" v-on:submit.prevent="formSubmit"> -->
+              <!-- @submit = v-on:submit -->
+              <form class="form-inline" @submit.prevent="formSubmit">
                 <input type="text" id="nameInput" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Jane Doe" v-model="newNameText">
                 <input type="submit" v-bind:class="formSubmitClass" class="btn btn-primary"></input>
               </form>
