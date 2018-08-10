@@ -29,6 +29,11 @@ new Vue({
             return this.guestName.sort()
         }
     },
+    filters: {
+        toUpper(value){
+            return value.toUpperCase()
+        }
+    }
     // watch: {
     //     guestName (data){
     //         console.log('object');
