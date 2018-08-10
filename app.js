@@ -1,7 +1,7 @@
 new Vue({
     el: '#app',
     data: {
-        event:{
+        event: {
             date: 'August 14th - 16th',
             title: 'Summer Festival!',
             sigUpText: 'Add your name to the guest list for <em>exclusive</em> offers:',
@@ -16,21 +16,21 @@ new Vue({
         enevtCapacityPercentage: 0
     },
     methods: {
-        formSubmit(){
-            if (this.newNameText.length > 0 && this.enevtCapacityPercentage < 1){
+        formSubmit() {
+            if (this.newNameText.length > 0 && this.enevtCapacityPercentage < 1) {
                 this.guestName.push(this.newNameText)
                 this.newNameText = ''
-                this.enevtCapacityPercentage = this.guestName.length/ (this.eventCapacity)
+                this.enevtCapacityPercentage = this.guestName.length / (this.eventCapacity)
             }
         }
     },
     computed: {
-        sortNames(){
+        sortNames() {
             return this.guestName.sort()
         }
     },
     filters: {
-        formatName(value){
+        formatName(value) {
             return value.slice(0, 1).toUpperCase() + value.slice(1).toLowerCase()
         }
     }
@@ -39,4 +39,12 @@ new Vue({
     //         console.log('object');
     //     }
     // }
-})
+});
+
+new Vue({
+    el: '#navigation',
+    data: {
+        appName: 'Guest List'
+    }
+
+});

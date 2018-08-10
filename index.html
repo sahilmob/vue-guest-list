@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Guest List</title>
   <script src="./vue.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="app.css">
 </head>
+
 <body>
 
-  <div id="app">
-    <div class="container">
-
-      <!-- <div class="row" :style="appStyles"> -->
+  <div class="container">
+    <div id="navigation">
+      <!-- <div class="row" v-bind:style="appStyles"> -->
       <div class="row" :style="appStyles">
         <div class="col-sm-12 text-center">
-          <h1>Guest List</h1>
+          <h1>{{appName}}</h1>
         </div>
       </div>
+    </div>
+    <div id="app">
+
 
       <!-- <div class="row" :style="appStyles"> -->
       <div class="row" :style="appStyles">
@@ -30,7 +35,8 @@
               {{event.date}}
             </div>
             <div class="card-block">
-              <h4 class="card-title" v-once>{{event.title}}</h4><hr>
+              <h4 class="card-title" v-once>{{event.title}}</h4>
+              <hr>
               <p class="card-text">{{event.description}}</p>
               <p class="card-text" v-html="event.sigUpText"></p>
 
@@ -39,7 +45,7 @@
               <form class="form-inline" @submit.prevent="formSubmit">
                 <input type="text" id="nameInput" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Jane Doe" v-model="newNameText">
                 <!-- <input type="submit" v-bind:class="formSubmitClass" class="btn btn-primary"></input> -->
-                <input type="submit"  class="btn btn-primary" @keyup.32="submit.prevent"></input>
+                <input type="submit" class="btn btn-primary" @keyup.32="submit.prevent"></input>
               </form>
               {{newNameText}}
             </div>
@@ -64,7 +70,7 @@
               </div>
               <div v-else>
                 <h4>No names added yet...</h4>
-                
+
               </div>
             </div>
           </div>
@@ -74,6 +80,7 @@
     </div>
   </div>
 
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
