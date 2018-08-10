@@ -4,6 +4,7 @@ new Vue({
         event:{
             date: 'August 14th - 16th',
             title: 'Summer Festival!',
+            sigUpText: 'Add your name to the guest list for <em>exclusive</em> offers:',
             description: "It's back! This years summer festival will be in the beautiful countryside featuring our best line up ever!"
         },
         newNameText: '',
