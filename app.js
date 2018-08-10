@@ -10,14 +10,14 @@ new Vue({
         newNameText: '',
         guestName: [],
         appStyles: {
-            marginTop: '25px',
+            marginTop: '5px',
         },
-        eventCapacity: 25,
+        eventCapacity: 5,
         enevtCapacityPercentage: 0
     },
     methods: {
         formSubmit(){
-            if (this.newNameText.length > 0){
+            if (this.newNameText.length > 0 && this.enevtCapacityPercentage < 1){
                 this.guestName.push(this.newNameText)
                 this.newNameText = ''
                 this.enevtCapacityPercentage = this.guestName.length/ (this.eventCapacity)
