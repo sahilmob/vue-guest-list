@@ -30,8 +30,8 @@ new Vue({
         }
     },
     filters: {
-        toUpper(value){
-            return value.toUpperCase()
+        formatName(value){
+            return value.slice(0, 1).toUpperCase() + value.slice(1).toLowerCase()
         }
     }
     // watch: {
