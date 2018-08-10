@@ -23,5 +23,10 @@ new Vue({
                 this.enevtCapacityPercentage = this.guestName.length/ (this.eventCapacity)
             }
         }
+    },
+    computed: {
+        sortNames(){
+            return this.guestName.sort()
+        }
     }
 })
