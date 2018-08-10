@@ -1,4 +1,4 @@
-new Vue({
+var vm1 = new Vue({
     el: '#app',
     data: {
         event: {
@@ -38,7 +38,7 @@ new Vue({
     // }
 });
 
-new Vue({
+var vm2 = new Vue({
     el: '#navigation',
     data: {
         appName: 'Guest List',
@@ -65,5 +65,4 @@ new Vue({
             },
         ]
     }
-
 });
