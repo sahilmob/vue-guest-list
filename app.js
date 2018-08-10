@@ -64,5 +64,10 @@ var vm2 = new Vue({
                 url: 'https://facebook.com'
             },
         ]
+    },
+    methods: {
+        // changeTitle() {
+        //     this.$refs.name.innerText = 'Title changed'
+        // }
     }
 });
