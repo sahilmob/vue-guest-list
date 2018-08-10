@@ -6,6 +6,13 @@ new Vue({
             title: 'Summer Festival!',
             description: "It's back! This years summer festival will be in the beautiful countryside featuring our best line up ever!"
         },
-        newNameText: ''
+        newNameText: '',
+        guestName: []
+    },
+    methods: {
+        formSubmit(){
+            this.guestName.push(this.newNameText)
+            this.newNameText = ''
+        }
     }
 })
