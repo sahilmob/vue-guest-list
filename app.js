@@ -9,9 +9,6 @@ new Vue({
         },
         newNameText: '',
         guestName: [],
-        appStyles: {
-            marginTop: '5px',
-        },
         eventCapacity: 5,
         enevtCapacityPercentage: 0
     },
