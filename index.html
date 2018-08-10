@@ -39,7 +39,7 @@
               <form class="form-inline" @submit.prevent="formSubmit">
                 <input type="text" id="nameInput" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Jane Doe" v-model="newNameText">
                 <!-- <input type="submit" v-bind:class="formSubmitClass" class="btn btn-primary"></input> -->
-                <input type="submit"  class="btn btn-primary"></input>
+                <input type="submit"  class="btn btn-primary" @keyup.32="submit.prevent"></input>
               </form>
               {{newNameText}}
             </div>

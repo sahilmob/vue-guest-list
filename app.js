@@ -28,5 +28,10 @@ new Vue({
         sortNames(){
             return this.guestName.sort()
         }
-    }
+    },
+    // watch: {
+    //     guestName (data){
+    //         console.log('object');
+    //     }
+    // }
 })
