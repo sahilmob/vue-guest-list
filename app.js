@@ -11,8 +11,10 @@ new Vue({
     },
     methods: {
         formSubmit(){
-            this.guestName.push(this.newNameText)
-            this.newNameText = ''
+            if (this.newNameText.length > 0){
+                this.guestName.push(this.newNameText)
+                this.newNameText = ''
+            }
         }
     }
 })
